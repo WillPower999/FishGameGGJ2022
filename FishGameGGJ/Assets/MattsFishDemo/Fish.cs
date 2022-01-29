@@ -7,6 +7,7 @@ public class Fish : MonoBehaviour
     [HideInInspector] public Rigidbody rb;
     public float movementForce;
     public GameObject gameCamera;
+    [HideInInspector] public bool canGoThruPortal;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +20,7 @@ public class Fish : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        canGoThruPortal = true;
     }
 
     void Update()
