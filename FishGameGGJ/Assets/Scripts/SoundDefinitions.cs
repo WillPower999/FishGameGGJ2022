@@ -1,24 +1,15 @@
 public enum Sound {
-    WalkingTentacles = 0,
-    Swimming,
-    FlyingBuzzing,
-    Shoot,
-    Melee,
-    Dialog,
-    Collect1,
-    Select
+    Soft_Splash = 0,
+    Deep_Splash,
+    Floppy_Fish,
+    Gate,
+    Dragon_Huff,
+    Over_Edge_Splash,
+    Button_Click,
 }
 
 public enum Music {
-    TitleTheme = 0,
-    Loading,
-    HubWorld,
-    FlyingHubWorld,
-    SwimmingHubWorld,
-    Level_1,
-    Level_1_Swimming,
-    Level_1_Flying,
-    KumesTheme,
-    Credits,
+    UI_Game_Audio = 0,
+    Level_Music,
     None
 }
