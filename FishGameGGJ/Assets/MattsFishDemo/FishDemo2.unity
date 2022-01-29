@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 521227947}
   - component: {fileID: 521227951}
   m_Layer: 0
-  m_Name: Cylinder -Boundries
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1064,7 +1064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8183052626218940845, guid: fe8e12e5929cec746826161a9de44b39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8183052626218940845, guid: fe8e12e5929cec746826161a9de44b39, type: 3}
       propertyPath: m_LocalRotation.w

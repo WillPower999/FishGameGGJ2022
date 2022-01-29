@@ -13,7 +13,7 @@ public class Fish : MonoBehaviour
     {
         if (other.GetComponent<Fish>())
         {
-            EndGame.Instance.Fade();
+            EndGame.Instance.NextLevel();
         }
     }
 
@@ -25,22 +25,22 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.eulerAngles = new Vector3(0, 270, 0);
             rb.AddForce(new Vector3 (-1,0,0) * movementForce);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.eulerAngles = new Vector3(0, 90, 0);
             rb.AddForce(new Vector3(1, 0, 0) * movementForce);
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             rb.AddForce(new Vector3(0, 0, 1) * movementForce);
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
             rb.AddForce(new Vector3(0, 0, -1) * movementForce);
