@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 838841761}
   - component: {fileID: 838841760}
   m_Layer: 5
-  m_Name: roatepoint
+  m_Name: RotatePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
