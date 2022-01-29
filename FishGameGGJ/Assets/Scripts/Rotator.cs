@@ -10,7 +10,7 @@ public class Rotator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public bool mouseOver = false;
     public float speed;
     public float initialSpeed;
-    public int nullSpeed;
+    public float nullSpeed;
 
     void Update()
     {
