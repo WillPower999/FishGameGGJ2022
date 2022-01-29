@@ -8,6 +8,9 @@ public class Fish : MonoBehaviour
     public float movementForce;
     public GameObject gameCamera;
     [HideInInspector] public bool canGoThruPortal;
+    public Animator animationClip;
+    public float idleSpeed;
+    public float moveSpeed;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,21 +32,29 @@ public class Fish : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 270, 0);
             rb.AddForce(new Vector3 (-1,0,0) * movementForce);
+            animationClip.speed = moveSpeed;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.eulerAngles = new Vector3(0, 90, 0);
             rb.AddForce(new Vector3(1, 0, 0) * movementForce);
+            animationClip.speed = moveSpeed;
         }
         else if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             rb.AddForce(new Vector3(0, 0, 1) * movementForce);
+            animationClip.speed = moveSpeed;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
             rb.AddForce(new Vector3(0, 0, -1) * movementForce);
+            animationClip.speed = moveSpeed;
+        }
+        else
+        {
+            animationClip.speed = idleSpeed;
         }
     }
 }

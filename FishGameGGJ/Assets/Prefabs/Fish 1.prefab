@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 2950994772422566830}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4eee8f117c7c77c43979434e65686529, type: 2}
+  m_Controller: {fileID: 9100000, guid: 100a8581e0d60914eb03e5b86a90d9af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -240,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4725436846080792283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.034, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4725436844808678717}
@@ -261,9 +261,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  movementForce: 20
+  movementForce: 1
   gameCamera: {fileID: 0}
   canGoThruPortal: 0
+  animationClip: {fileID: 7656263691463583439}
+  idleSpeed: 1
+  moveSpeed: 3
 --- !u!54 &4725436846080792285
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -290,10 +293,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.15
+  m_Radius: 0.13537778
+  m_Height: 0.91807413
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.022786006, y: 0.0921316, z: 0.055819154}
 --- !u!1001 &2609101294140727039
 PrefabInstance:
   m_ObjectHideFlags: 0
