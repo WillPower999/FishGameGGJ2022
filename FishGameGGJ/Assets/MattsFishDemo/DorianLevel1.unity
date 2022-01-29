@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  movementForce: 20
+  movementForce: 1
   gameCamera: {fileID: 681617946}
   canGoThruPortal: 0
 --- !u!4 &2008167600
@@ -1278,6 +1278,10 @@ PrefabInstance:
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 681617946}
+    - target: {fileID: 4725436846080792284, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: movementForce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792285, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_Mass
       value: 1
