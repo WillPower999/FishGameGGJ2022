@@ -11,7 +11,7 @@ public class Fish : MonoBehaviour
     {
         if (other.GetComponent<Fish>())
         {
-            EndGame.Instance.Fade();
+            EndGame.Instance.FadeOut();
         }
     }
 
