@@ -16,12 +16,14 @@ public class SceneManagerClass : MonoBehaviour
     public void PlayOnAwake()
     {
         controlUIShow = false;
+        SoundManager.Instance.PlayMusic(Music.UI_Game_Audio);
     }
 
     private void Start()
     {
         loadGame.onClick.AddListener(LoadGame);
         controlUI.onClick.AddListener(ShowControlMenu);
+        SoundManager.Instance.PlayMusic(Music.UI_Game_Audio);
     }
 
     private void Update()

@@ -43,6 +43,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e2bca40a5314443ab7f84e46593d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _soundEffects: []
-  _musicTracks: []
+  _soundEffects:
+  - _soundOption: 0
+    _clip: {fileID: 8300000, guid: 4ca2b5dc02e59a547bdfa60a05987938, type: 3}
+  - _soundOption: 1
+    _clip: {fileID: 8300000, guid: fe54e4117bcf43e48b1e95c95115bdc4, type: 3}
+  - _soundOption: 2
+    _clip: {fileID: 8300000, guid: 1893486caba7a9e4889cf56ad9a84635, type: 3}
+  - _soundOption: 3
+    _clip: {fileID: 8300000, guid: 640f2facdde15d949a240552fa1e58e4, type: 3}
+  - _soundOption: 4
+    _clip: {fileID: 8300000, guid: 24556a0f4f9631b4e93cc4b0a9276537, type: 3}
+  - _soundOption: 5
+    _clip: {fileID: 8300000, guid: ccc376efb4ae4db4a8c9d7c1e439d67e, type: 3}
+  - _soundOption: 6
+    _clip: {fileID: 8300000, guid: 93d69eeb539e4824aa99c4818eb30801, type: 3}
+  _musicTracks:
+  - _musicOption: 0
+    _track: {fileID: 8300000, guid: 85d34430903b9fd42830c1dedb4eeb08, type: 3}
+  - _musicOption: 1
+    _track: {fileID: 8300000, guid: e876e5a35371b844ea9f9fcc2324cd76, type: 3}
   _numSoundEffectSources: 0
