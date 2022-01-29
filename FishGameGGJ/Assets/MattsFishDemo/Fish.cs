@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
-    Rigidbody rb;
+    [HideInInspector] public Rigidbody rb;
     public float movementForce;
     public GameObject gameCamera;
-    public Transform hi;
 
     private void OnTriggerEnter(Collider other)
     {
