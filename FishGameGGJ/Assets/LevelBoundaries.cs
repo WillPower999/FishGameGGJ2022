@@ -8,11 +8,15 @@ public class LevelBoundaries : MonoBehaviour
     public Fish fishOne;
     public Fish fishTwo;
     public float deathDelay;
+    public GameObject FishBody1;
+    public GameObject FishBody2;
    
 
     void Start()
     {
-        
+        //FishBody1.GetComponent<Renderer>().enabled = false;
+        //FishBody2.GetComponent<Renderer>().enabled = false;
+
     }
 
     private void OnTriggerExit(Collider other)
