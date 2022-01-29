@@ -28,25 +28,25 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             transform.eulerAngles = new Vector3(0, 270, 0);
             rb.AddForce(new Vector3 (-1,0,0) * movementForce);
             animationClip.speed = moveSpeed;
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             transform.eulerAngles = new Vector3(0, 90, 0);
             rb.AddForce(new Vector3(1, 0, 0) * movementForce);
             animationClip.speed = moveSpeed;
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             rb.AddForce(new Vector3(0, 0, 1) * movementForce);
             animationClip.speed = moveSpeed;
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
             rb.AddForce(new Vector3(0, 0, -1) * movementForce);
