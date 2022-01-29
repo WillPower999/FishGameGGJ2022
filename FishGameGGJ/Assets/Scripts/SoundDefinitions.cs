@@ -5,6 +5,7 @@ public enum Sound {
     Gate,
     Dragon_Huff,
     Over_Edge_Splash,
+    Button_Click,
 }
 
 public enum Music {
