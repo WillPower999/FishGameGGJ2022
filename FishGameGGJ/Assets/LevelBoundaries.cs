@@ -31,6 +31,8 @@ public class LevelBoundaries : MonoBehaviour
     private IEnumerator Retry()
     {
         yield return new WaitForSeconds(deathDelay);
+        EndGame.Instance.FadeOut();
+        yield return new WaitForSeconds(deathDelay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
