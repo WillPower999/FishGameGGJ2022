@@ -265,8 +265,9 @@ MonoBehaviour:
   gameCamera: {fileID: 0}
   canGoThruPortal: 0
   animationClip: {fileID: 7656263691463583439}
-  idleSpeed: 1
-  moveSpeed: 3
+  idleSpeed: 4
+  moveSpeed: 12
+  grass: {fileID: 0}
 --- !u!54 &4725436846080792285
 Rigidbody:
   m_ObjectHideFlags: 0
