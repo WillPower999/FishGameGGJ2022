@@ -21,6 +21,7 @@ public class LevelBoundaries : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        print("hello");
         if (other.gameObject == fishOne.gameObject)
         {
             fishOne.rb.constraints = RigidbodyConstraints.None;
