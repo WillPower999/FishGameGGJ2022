@@ -11,7 +11,6 @@ public class Fish : MonoBehaviour
     public Animator animationClip;
     public float idleSpeed;
     public float moveSpeed;
-    public GameObject grass;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,7 +31,7 @@ public class Fish : MonoBehaviour
         SoundManager.Instance.PlayMusic(Music.Level_Music);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {

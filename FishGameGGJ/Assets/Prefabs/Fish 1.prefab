@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  movementForce: 1
+  movementForce: 7
   gameCamera: {fileID: 0}
   canGoThruPortal: 0
   animationClip: {fileID: 7656263691463583439}
