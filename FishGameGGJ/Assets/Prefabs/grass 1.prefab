@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6480244611599234753}
   - component: {fileID: 6480244611599234758}
-  - component: {fileID: -4013393410332383306}
+  - component: {fileID: 1410392805117709907}
   m_Layer: 0
   m_Name: grass 1
   m_TagString: Untagged
@@ -84,15 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4013393410332383306
-MonoBehaviour:
+--- !u!95 &1410392805117709907
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6480244611599234759}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda453cb82267c04a9f1ff243b77d6cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35b711d1c70999b4fb3a980dab8e4d80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
