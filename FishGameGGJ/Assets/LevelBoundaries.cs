@@ -14,7 +14,7 @@ public class LevelBoundaries : MonoBehaviour
 
     void Start()
     {
-        //FishBody1.GetComponent<Renderer>().enabled = false;
+        //FishBody1.GetComp onent<Renderer>().enabled = false;
         //FishBody2.GetComponent<Renderer>().enabled = false;
 
     }

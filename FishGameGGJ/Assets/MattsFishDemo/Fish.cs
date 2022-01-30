@@ -16,7 +16,7 @@ public class Fish : MonoBehaviour
     {
         if (other.GetComponent<Fish>())
         {
-            EndGame.Instance.NextLevel();
+                LevelEndAnimation.Instance.FindCenterPoint();
         }
     }
 
