@@ -9,6 +9,7 @@ public class EndGame : MonoBehaviour
 {
     public static EndGame Instance;
     Image fadeImage;
+    public bool creditIndex;
 
     void Awake()
     {
@@ -31,12 +32,33 @@ public class EndGame : MonoBehaviour
     public void NextLevel()
     {
         FadeOut();
-        StartCoroutine(LoadNextLevel());
+        if (creditIndex)
+        {
+            StartCoroutine(Credits());
+        }
+        else
+        {
+            StartCoroutine(LoadNextLevel());
+        }
     }
 
     private IEnumerator LoadNextLevel()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (creditIndex)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    private IEnumerator Credits()
+    {
+        yield return new WaitForSeconds(10);
+        creditIndex = false;
+        FadeIn();
     }
 }
