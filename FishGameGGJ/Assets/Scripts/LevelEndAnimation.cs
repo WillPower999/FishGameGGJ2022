@@ -8,6 +8,7 @@ public class LevelEndAnimation : MonoBehaviour
     public Fish fishOne;
     public Fish fishTwo;
     private float distanceBetweenFish;
+    public float levelChangeDelay;
     private bool collided = false;
     [SerializeField] private GameObject rotationPoint;
     [SerializeField] private GameObject sphere;
@@ -25,12 +26,22 @@ public class LevelEndAnimation : MonoBehaviour
             collided = true;
             Vector3 fishOnePos = fishOne.gameObject.transform.position;
             Vector3 fishTwoPos = fishTwo.gameObject.transform.position;
-            Vector3 centerPoint = (fishOnePos + fishOnePos) / 2;
+            Vector3 centerPoint = (fishOnePos + fishTwoPos) / 2;
             Destroy(fishOne.gameObject);
             Destroy(fishTwo.gameObject);
-            Instantiate(sphere, centerPoint, transform.rotation);
+            //Instantiate(sphere, centerPoint, transform.rotation);
             Instantiate(rotationPoint, centerPoint, transform.rotation, null);
-            //EndGame.Instance.NextLevel();
+            StartCoroutine(LevelChange());    
         }
+        else
+        {
+
+        }
+    }
+
+    private IEnumerator LevelChange()
+    {
+        yield return new WaitForSeconds(levelChangeDelay);
+        EndGame.Instance.NextLevel();
     }
 }
