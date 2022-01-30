@@ -11,6 +11,7 @@ public class Fish : MonoBehaviour
     public Animator animationClip;
     public float idleSpeed;
     public float moveSpeed;
+    public GameObject grass;
 
     private void OnTriggerEnter(Collider other)
     {
