@@ -16,6 +16,7 @@ public class Fish : MonoBehaviour
     {
         if (other.GetComponent<Fish>())
         {
+            print("Fish Touch"); 
             EndGame.Instance.NextLevel();
         }
     }
