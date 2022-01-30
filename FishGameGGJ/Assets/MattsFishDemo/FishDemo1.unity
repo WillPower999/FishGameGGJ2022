@@ -999,7 +999,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishOne: {fileID: 956235147}
   fishTwo: {fileID: 639266290}
-  testSphere: {fileID: 313315599238406289, guid: dcca96bffa0cfe14ba9be3346826926d, type: 3}
+  rotationPoint: {fileID: 313315599238406289, guid: dcca96bffa0cfe14ba9be3346826926d, type: 3}
+  sphere: {fileID: 2586637166898560911, guid: a6e6104ba4262474784aeeb81002a6a4, type: 3}
 --- !u!4 &256037096
 Transform:
   m_ObjectHideFlags: 0
