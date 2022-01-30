@@ -40,11 +40,13 @@ public class SceneManagerClass : MonoBehaviour
 
     public void LoadGame()
     {
+        SoundManager.Instance.PlaySound(Sound.Button_Click);
         SceneManager.LoadScene(sceneToLoad);
     }
 
     public void ShowControlMenu()
     {
+        SoundManager.Instance.PlaySound(Sound.Button_Click);
         controlUIShow = true;
     }
 

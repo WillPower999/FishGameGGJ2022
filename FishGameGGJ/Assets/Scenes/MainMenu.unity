@@ -1474,6 +1474,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2062808876399568097, guid: e5d7598a10e9a7e47a16bbd174638edd, type: 3}
+      propertyPath: _numSoundEffectSources
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062808876399568097, guid: e5d7598a10e9a7e47a16bbd174638edd, type: 3}
       propertyPath: _musicTracks.Array.size
       value: 2
       objectReference: {fileID: 0}

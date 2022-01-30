@@ -20,6 +20,7 @@ public class Portal : MonoBehaviour
             other.GetComponent<Fish>().canGoThruPortal = false;
             other.transform.position = linkedPortal.transform.position;
         }
+        SoundManager.Instance.PlaySound(Sound.Gate);
     }
 
     private void OnTriggerExit(Collider other)

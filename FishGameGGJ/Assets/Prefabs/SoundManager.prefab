@@ -63,4 +63,4 @@ MonoBehaviour:
     _track: {fileID: 8300000, guid: 85d34430903b9fd42830c1dedb4eeb08, type: 3}
   - _musicOption: 1
     _track: {fileID: 8300000, guid: e876e5a35371b844ea9f9fcc2324cd76, type: 3}
-  _numSoundEffectSources: 0
+  _numSoundEffectSources: 7

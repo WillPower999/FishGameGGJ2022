@@ -53,7 +53,7 @@ public sealed class SoundManager : MonoBehaviour {
     private float _bgmCrossFadeDuration;
 
     [SerializeField]
-    private int _numSoundEffectSources = 5;
+    private int _numSoundEffectSources;
     private AudioSource[] _fxSources = null;
     private int _fxSourceIndex;
     

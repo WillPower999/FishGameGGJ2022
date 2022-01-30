@@ -29,6 +29,7 @@ public class LevelBoundaries : MonoBehaviour
         {
             fishTwo.rb.constraints = RigidbodyConstraints.None;
         }
+        SoundManager.Instance.PlaySound(Sound.Over_Edge_Splash);
         StartCoroutine(Retry());
     }
 

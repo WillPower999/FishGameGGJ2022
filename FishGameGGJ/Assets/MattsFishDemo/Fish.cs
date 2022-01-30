@@ -26,6 +26,11 @@ public class Fish : MonoBehaviour
         canGoThruPortal = true;
     }
 
+    void Start()
+    {
+        SoundManager.Instance.PlayMusic(Music.Level_Music);
+    }
+
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
