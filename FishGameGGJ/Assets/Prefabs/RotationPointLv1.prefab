@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4386298407223881032}
   - component: {fileID: 8148911306122735270}
   m_Layer: 0
-  m_Name: RotationPoint
+  m_Name: RotationPointLv1
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -57,6 +57,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4386298407223881032}
     m_Modifications:
+    - target: {fileID: 1541463870456858632, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d91285625b81b974ba0aa7648ccd8500, type: 2}
     - target: {fileID: 4725436844629658404, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -123,6 +127,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4386298407223881032}
     m_Modifications:
+    - target: {fileID: 1541463870456858632, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98eeacaa13a7f644db12cc09b0e67aa4, type: 2}
     - target: {fileID: 4725436844629658404, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_RootOrder
       value: 0

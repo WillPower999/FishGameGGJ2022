@@ -6,17 +6,33 @@ public class CameraPivot : MonoBehaviour
 {
     [SerializeField] float rotateAmount;
     [SerializeField] Transform camera;
+    public bool rotateParent;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
-            camera.transform.Rotate(0, 0, -rotateAmount);
+            if (rotateParent)
+            {
+                transform.Rotate(0, 0, -rotateAmount);
+            }
+            else
+            {
+                camera.transform.Rotate(0, 0, -rotateAmount);
+            }
+
             SoundManager.Instance.PlaySound(Sound.Deep_Splash);
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
-            camera.transform.Rotate(0, 0, rotateAmount);
+            if (rotateParent)
+            {
+                transform.Rotate(0, 0, rotateAmount);
+            }
+            else
+            {
+                camera.transform.Rotate(0, 0, rotateAmount);
+            }
             SoundManager.Instance.PlaySound(Sound.Deep_Splash);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
