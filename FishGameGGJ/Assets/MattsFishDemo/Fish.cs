@@ -11,6 +11,7 @@ public class Fish : MonoBehaviour
     public Animator animationClip;
     public float idleSpeed;
     public float moveSpeed;
+    private bool fishStill;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,6 +25,7 @@ public class Fish : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         canGoThruPortal = true;
+        fishStill = true;
     }
 
     void Start()
@@ -35,24 +37,44 @@ public class Fish : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
+            if (rb.velocity == Vector3.zero && fishStill)
+            {
+                SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+                fishStill = false;
+            }
             transform.eulerAngles = new Vector3(0, 270, 0);
             rb.AddForce(new Vector3 (-1,0,0) * movementForce);
             animationClip.speed = moveSpeed;
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
+            if (rb.velocity == Vector3.zero && fishStill)
+            {
+                SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+                fishStill = false;
+            }
             transform.eulerAngles = new Vector3(0, 90, 0);
             rb.AddForce(new Vector3(1, 0, 0) * movementForce);
             animationClip.speed = moveSpeed;
         }
         else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
+            if (rb.velocity == Vector3.zero && fishStill)
+            {
+                SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+                fishStill = false;
+            }
             transform.eulerAngles = new Vector3(0, 0, 0);
             rb.AddForce(new Vector3(0, 0, 1) * movementForce);
             animationClip.speed = moveSpeed;
         }
         else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
+            if (rb.velocity == Vector3.zero && fishStill)
+            {
+                SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+                fishStill = false;
+            }
             transform.eulerAngles = new Vector3(0, 180, 0);
             rb.AddForce(new Vector3(0, 0, -1) * movementForce);
             animationClip.speed = moveSpeed;
@@ -60,6 +82,10 @@ public class Fish : MonoBehaviour
         else
         {
             animationClip.speed = idleSpeed;
+            if (rb.velocity == Vector3.zero)
+            {
+                fishStill = true;
+            }
         }
     }
 }

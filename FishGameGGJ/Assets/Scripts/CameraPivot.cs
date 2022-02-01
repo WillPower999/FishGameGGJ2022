@@ -21,7 +21,7 @@ public class CameraPivot : MonoBehaviour
                 camera.transform.Rotate(0, 0, -rotateAmount);
             }
 
-            SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+            //SoundManager.Instance.PlaySound(Sound.Deep_Splash);
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
@@ -33,18 +33,18 @@ public class CameraPivot : MonoBehaviour
             {
                 camera.transform.Rotate(0, 0, rotateAmount);
             }
-            SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+            //SoundManager.Instance.PlaySound(Sound.Deep_Splash);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             transform.Rotate(-rotateAmount, 0, 0);
-            SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+            //SoundManager.Instance.PlaySound(Sound.Deep_Splash);
 
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             transform.Rotate(rotateAmount, 0, 0);
-            SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+            //SoundManager.Instance.PlaySound(Sound.Deep_Splash);
 
         }
 
