@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -189,7 +189,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 3a97b485be1702f40b13021153eb2c57, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8c14ed80ab4cbdd4b8494ac51d30565d, type: 2}
+      objectReference: {fileID: 2100000, guid: ef88ff80b89ec694cb177cce4074116d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3a97b485be1702f40b13021153eb2c57, type: 3}
       propertyPath: m_Name
       value: Dragon_Model_1 (1)
@@ -5249,6 +5249,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 32a4cb80b3025ea4594e9b665ab6d567, type: 2}
+    - target: {fileID: 2950994772422566830, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4725436844629658404, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -5295,8 +5299,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792283, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_Name
-      value: Fish 1 (1)
+      value: Purple Fish
       objectReference: {fileID: 0}
+    - target: {fileID: 7908506770156013135, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3fe05b19bb7be6d44b9013e9cfa777a7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
 --- !u!1 &1875876782
@@ -6654,6 +6662,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 25620daf2f1774f418c4b761c9e91176, type: 2}
+    - target: {fileID: 2950994772422566830, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4725436844629658404, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6698,9 +6710,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4725436844808678714, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792283, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_Name
-      value: Fish 1
+      value: Yellow Fish
       objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792284, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: gameCamera
@@ -6726,6 +6742,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7908506770156013135, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d43168261ec78e4db20fa18cda76c92, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
 --- !u!23 &4850603697828837216
