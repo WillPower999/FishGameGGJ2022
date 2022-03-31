@@ -1689,6 +1689,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5669747206523250953, guid: c5443567d95c3fd4abef186fad28a7de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d43168261ec78e4db20fa18cda76c92, type: 2}
     - target: {fileID: 919132149155446097, guid: c5443567d95c3fd4abef186fad28a7de, type: 3}
       propertyPath: m_Name
       value: showcasefish
@@ -1751,6 +1755,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5669747206523250953, guid: c5443567d95c3fd4abef186fad28a7de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3fe05b19bb7be6d44b9013e9cfa777a7, type: 2}
     - target: {fileID: 919132149155446097, guid: c5443567d95c3fd4abef186fad28a7de, type: 3}
       propertyPath: m_Name
       value: showcasefish

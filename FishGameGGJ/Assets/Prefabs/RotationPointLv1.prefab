@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792283, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_Name
-      value: Fish 1 (1)
+      value: Red Fish
       objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792284, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_Enabled
@@ -236,12 +236,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792283, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_Name
-      value: Fish 1
+      value: Blue Fish
       objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792284, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7908506770156013135, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 611ad5ba12373974180239d45205d817, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
 --- !u!4 &14951391172277104 stripped
