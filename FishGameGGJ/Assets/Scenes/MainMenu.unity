@@ -674,9 +674,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 1}
   mouseOver: 0
-  speed: 0.7
-  initialSpeed: 0.7
-  nullSpeed: 0.07
+  speed: 1
+  initialSpeed: 1
+  nullSpeed: 0.5
 --- !u!61 &838841757
 BoxCollider2D:
   m_ObjectHideFlags: 0

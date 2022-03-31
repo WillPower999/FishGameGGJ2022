@@ -43,7 +43,7 @@ public class Fish : MonoBehaviour
                 fishStill = false;
             }
             transform.eulerAngles = new Vector3(0, 270, 0);
-            rb.AddForce(new Vector3 (-1,0,0) * movementForce);
+            rb.AddForce(new Vector3 (-1, 0, 0) * movementForce);
             animationClip.speed = moveSpeed;
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
