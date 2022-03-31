@@ -12,7 +12,7 @@ public class Rotator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public float initialSpeed;
     public float nullSpeed;
 
-    void Update()
+    void FixedUpdate()
     {
         transform.Rotate(direction * speed);
     }
