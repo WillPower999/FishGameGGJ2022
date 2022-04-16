@@ -7,34 +7,55 @@ using UnityEngine.UI;
 public class SceneManagerClass : MonoBehaviour
 {
     public Button loadGame;
-    public Button controlUI;
+    public Button menuUI;
+    public Button portraitToggleON;
+    public Button portraitToggleOFF;
+    //public CameraPivot portraitMode;
+    public bool menuUIShow;
     public bool controlUIShow;
     public int sceneToLoad;
+    public GameObject menu;
     public GameObject controls;
 
     public void PlayOnAwake()
     {
         controlUIShow = false;
-        SoundManager.Instance.PlayMusic(Music.UI_Game_Audio);
+        CameraPivot portraitMode= FindObjectOfType<CameraPivot>(); 
     }
 
     private void Start()
     {
         loadGame.onClick.AddListener(LoadGame);
-        controlUI.onClick.AddListener(ShowControlMenu);
+        menuUI.onClick.AddListener(ShowControlMenu);
         SoundManager.Instance.PlayMusic(Music.UI_Game_Audio);
     }
 
     private void Update()
     {
-        if (controlUIShow)
+        if(menuUIShow)
         {
-            ControlMenu();
+            Menu();
+            if (controlUIShow)
+            {
+                ControlMenu();
+            }
+            else
+            {
+
+            }
+        }
+
+        if(portraitMode.isPortrait)
+        {
+            //portraitToggleON.colors.normalColor = Color.green;
+            //portraitToggleOFF.colors.normalColor = Color.red;
         }
         else
         {
-
+            //portraitToggleON.colors.normalColor = Color.red;
+            //portraitToggleOFF.colors.normalColor. = Color.green;
         }
+
     }
 
     public void LoadGame()
@@ -49,6 +70,21 @@ public class SceneManagerClass : MonoBehaviour
         controlUIShow = true;
     }
 
+    public void Menu()
+    {
+        menu.SetActive(true);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menu.SetActive(false);
+            menuUIShow = false;
+        }
+
+        portraitToggleON.onClick.AddListener(Portrait);
+
+        portraitToggleOFF.onClick.AddListener(NoPortrait);
+
+
+    }
     public void ControlMenu()
     {
         controls.SetActive(true);
@@ -58,6 +94,16 @@ public class SceneManagerClass : MonoBehaviour
             controlUIShow = false;
         }
 
+    }
+
+    public void Portrait()
+    {
+        portraitMode.isPortrait = true;
+    }
+
+    public void NoPortrait()
+    {
+        portraitMode.isPortrait = false;
     }
 
 }

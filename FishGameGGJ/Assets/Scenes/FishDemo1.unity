@@ -199,12 +199,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88643502}
-  m_LocalRotation: {x: 0.38268346, y: -0, z: -0, w: 0.9238795}
-  m_LocalPosition: {x: 0, y: 0.08, z: 10.19}
-  m_LocalScale: {x: 1, y: 1.5600002, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -9.548387, y: -0.86457205, z: 1.6976128}
+  m_LocalScale: {x: 1, y: 1.5600001, z: 1}
   m_Children: []
-  m_Father: {fileID: 681617949}
-  m_RootOrder: 0
+  m_Father: {fileID: 130841953}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &96239460
 GameObject:
@@ -271,6 +271,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 681617949}
+  - {fileID: 88643504}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -288,6 +289,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateAmount: 3
   camera: {fileID: 681617949}
+  cameraAgain: {fileID: 681617946}
+  worldItems: {fileID: 642123321}
+  portraitAdjust: {x: 0, y: 10, z: 0}
+  portraitVectorSetting: {x: -9.548387, y: 6.284277, z: 0.054}
+  portraitRotationSetting: {x: 90, y: 0, z: 0, w: 0}
+  isPortrait: 0
   rotateParent: 0
 --- !u!1 &180727398 stripped
 GameObject:
@@ -518,7 +525,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &267128243 stripped
 GameObject:
@@ -641,7 +648,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346470772}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.11804783, y: -2.5712857, z: 2.1183538}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -655,8 +662,8 @@ Transform:
   - {fileID: 1108004851}
   - {fileID: 1733484746}
   - {fileID: 1471287095}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 642123322}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &465262152
 GameObject:
@@ -1301,6 +1308,8 @@ Transform:
   - {fileID: 2003035292}
   - {fileID: 2098985528}
   - {fileID: 639266287}
+  - {fileID: 346470773}
+  - {fileID: 1814932880}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1412,8 +1421,7 @@ Transform:
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
   m_LocalPosition: {x: -9.548387, y: 6.284277, z: -5.564374}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 88643504}
+  m_Children: []
   m_Father: {fileID: 130841953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
@@ -2031,8 +2039,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173136429}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.661901, y: -0.052, z: 5.002227}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.151901, y: -0.052, z: 5.6222267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1281352310}
@@ -2042,8 +2050,8 @@ Transform:
   - {fileID: 278876162}
   - {fileID: 876157592}
   - {fileID: 7638935953355942168}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1814932880}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1222239433 stripped
 GameObject:
@@ -3002,7 +3010,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814932879}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.51, y: 0, z: -0.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3013,8 +3021,9 @@ Transform:
   - {fileID: 1222239434}
   - {fileID: 671777497}
   - {fileID: 1855650840}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  - {fileID: 1173136430}
+  m_Father: {fileID: 642123322}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1834899949
 PrefabInstance:
