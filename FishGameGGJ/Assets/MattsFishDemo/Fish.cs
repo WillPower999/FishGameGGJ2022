@@ -13,11 +13,15 @@ public class Fish : MonoBehaviour
     public float moveSpeed;
     private bool fishStill;
 
+    [SerializeField] HoldButton up;
+    [SerializeField] HoldButton down;
+    [SerializeField] HoldButton left;
+    [SerializeField] HoldButton right;
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Fish>())
         {
-                LevelEndAnimation.Instance.FindCenterPoint();
+            LevelEndAnimation.Instance.FindCenterPoint();
         }
     }
 
@@ -35,7 +39,7 @@ public class Fish : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) || left.isPressed)
         {
             if (rb.velocity == Vector3.zero && fishStill)
             {
@@ -46,7 +50,7 @@ public class Fish : MonoBehaviour
             rb.AddForce(new Vector3 (-1, 0, 0) * movementForce);
             animationClip.speed = moveSpeed;
         }
-        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || right.isPressed)
         {
             if (rb.velocity == Vector3.zero && fishStill)
             {
@@ -57,7 +61,7 @@ public class Fish : MonoBehaviour
             rb.AddForce(new Vector3(1, 0, 0) * movementForce);
             animationClip.speed = moveSpeed;
         }
-        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) || up.isPressed)
         {
             if (rb.velocity == Vector3.zero && fishStill)
             {
@@ -68,7 +72,7 @@ public class Fish : MonoBehaviour
             rb.AddForce(new Vector3(0, 0, 1) * movementForce);
             animationClip.speed = moveSpeed;
         }
-        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S) || down.isPressed)
         {
             if (rb.velocity == Vector3.zero && fishStill)
             {
