@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IPointerEnterHandler
 {
+
     [HideInInspector] public bool isPressed;
 
     public void OnPointerDown(PointerEventData eventData)
