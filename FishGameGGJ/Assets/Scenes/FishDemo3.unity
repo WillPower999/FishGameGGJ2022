@@ -550,9 +550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd3699a98145ca409b2b68cf1d53f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateAmount: 1
+  rotateAmount: 3
   camera: {fileID: 681617949}
-  rotateParent: 0
+  rotateParent: 1
 --- !u!1 &161089614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,7 +4094,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6480244611599234753, guid: 804e75737a5dfd644965f64e08ce04c4, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6480244611599234753, guid: 804e75737a5dfd644965f64e08ce04c4, type: 3}
       propertyPath: m_LocalScale.x
@@ -4294,7 +4294,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6480244611599234753, guid: 804e75737a5dfd644965f64e08ce04c4, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6480244611599234753, guid: 804e75737a5dfd644965f64e08ce04c4, type: 3}
       propertyPath: m_LocalScale.x
@@ -5650,7 +5650,7 @@ PrefabInstance:
     - target: {fileID: 4725436846080792284, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: gameCamera
       value: 
-      objectReference: {fileID: 681617946}
+      objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792285, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: m_Constraints
       value: 116
@@ -7613,7 +7613,7 @@ PrefabInstance:
     - target: {fileID: 4725436846080792284, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: gameCamera
       value: 
-      objectReference: {fileID: 681617946}
+      objectReference: {fileID: 0}
     - target: {fileID: 4725436846080792284, guid: f95d59eed694f44458162ecc6a020d0d, type: 3}
       propertyPath: movementForce
       value: 7

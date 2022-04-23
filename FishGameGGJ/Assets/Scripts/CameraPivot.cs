@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraPivot : MonoBehaviour
 {
@@ -14,44 +15,40 @@ public class CameraPivot : MonoBehaviour
         {
             if (rotateParent)
             {
-                transform.Rotate(0, 0, -rotateAmount);
+                transform.DORotate(new Vector3(0, 0, -rotateAmount), .5f);
             }
             else
             {
-                camera.transform.Rotate(0, 0, -rotateAmount);
+                camera.transform.DORotate(new Vector3(0, 0, -rotateAmount), .5f);
             }
 
-            //SoundManager.Instance.PlaySound(Sound.Deep_Splash);
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             if (rotateParent)
             {
-                transform.Rotate(0, 0, rotateAmount);
+                transform.DORotate(new Vector3(0, 0, rotateAmount), .5f);
             }
             else
             {
-                camera.transform.Rotate(0, 0, rotateAmount);
+                camera.transform.DORotate(new Vector3(0, 0, rotateAmount), .5f);
             }
-            //SoundManager.Instance.PlaySound(Sound.Deep_Splash);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            transform.Rotate(-rotateAmount, 0, 0);
-            //SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+            transform.DORotate(new Vector3(-rotateAmount, 0, 0), .5f);
 
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            transform.Rotate(rotateAmount, 0, 0);
-            //SoundManager.Instance.PlaySound(Sound.Deep_Splash);
+            transform.DORotate(new Vector3(rotateAmount, 0, 0), .5f);
 
         }
 
         if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
-            transform.eulerAngles = Vector3.zero;
-            camera.transform.eulerAngles = new Vector3(45, 0, 0);
+            transform.DORotate(new Vector3(0, 0, 0), .5f);
+            camera.transform.DORotate(new Vector3(45, 0, 0), .5f);
             SoundManager.Instance.PlaySound(Sound.Soft_Splash);
 
         }
