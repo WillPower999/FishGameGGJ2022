@@ -9,12 +9,6 @@ public class CameraSizeManager : MonoBehaviour
     [SerializeField] float LandscapeCameraSize;
     [SerializeField] float PortraitCameraSize;
 
-    [SerializeField] TextMeshProUGUI logText;
-
-    [SerializeField] DeviceOrientation prevOrientation;
-
-    public Transform pool;
-
     void Update()
     {
         if (Input.deviceOrientation == DeviceOrientation.Portrait || Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown)
@@ -25,9 +19,5 @@ public class CameraSizeManager : MonoBehaviour
         {
             Camera.main.orthographicSize = LandscapeCameraSize;
         }
-
-        logText.SetText(Input.deviceOrientation.ToString());
-
-        pool.DORotate(Vector3.zero, 1).SetEase(Ease.InOutBack);
     }
 }
