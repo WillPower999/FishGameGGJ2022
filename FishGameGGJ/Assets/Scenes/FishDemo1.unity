@@ -294,7 +294,6 @@ MonoBehaviour:
   portraitAdjust: {x: 0, y: 10, z: 0}
   portraitVectorSetting: {x: -9.548387, y: 6.284277, z: 0.054}
   portraitRotationSetting: {x: 90, y: 0, z: 0, w: 0}
-  isPortrait: 0
   rotateParent: 0
 --- !u!1 &180727398 stripped
 GameObject:

@@ -14,7 +14,7 @@ public class CameraPivot : MonoBehaviour
     public Vector3 portraitVectorSetting;
     public Quaternion portraitRotationSetting;
 
-    [HideInInspector] public bool isPortrait;
+    [HideInInspector] public static bool isPortrait;
 
     public bool rotateParent;
 

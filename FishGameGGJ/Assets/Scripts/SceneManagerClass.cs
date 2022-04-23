@@ -6,27 +6,30 @@ using UnityEngine.UI;
 
 public class SceneManagerClass : MonoBehaviour
 {
+    public TextManager tM;
     public Button loadGame;
     public Button menuUI;
-    public Button portraitToggleON;
-    public Button portraitToggleOFF;
+    public Button controls;
+    public Button japaneseToggleON;
+    public Button japaneseToggleOFF;
     //public CameraPivot portraitMode;
     public bool menuUIShow;
     public bool controlUIShow;
     public int sceneToLoad;
     public GameObject menu;
-    public GameObject controls;
+    public GameObject controlsUI;
 
     public void PlayOnAwake()
     {
+        tM = FindObjectOfType<TextManager>();
         controlUIShow = false;
-        CameraPivot portraitMode= FindObjectOfType<CameraPivot>(); 
+        //CameraPivot portraitMode= FindObjectOfType<CameraPivot>(); 
     }
 
     private void Start()
     {
         loadGame.onClick.AddListener(LoadGame);
-        menuUI.onClick.AddListener(ShowControlMenu);
+        menuUI.onClick.AddListener(ShowMenu);
         SoundManager.Instance.PlayMusic(Music.UI_Game_Audio);
     }
 
@@ -45,7 +48,7 @@ public class SceneManagerClass : MonoBehaviour
             }
         }
 
-        if(portraitMode.isPortrait)
+        if(tM.isChanged)
         {
             //portraitToggleON.colors.normalColor = Color.green;
             //portraitToggleOFF.colors.normalColor = Color.red;
@@ -55,7 +58,6 @@ public class SceneManagerClass : MonoBehaviour
             //portraitToggleON.colors.normalColor = Color.red;
             //portraitToggleOFF.colors.normalColor. = Color.green;
         }
-
     }
 
     public void LoadGame()
@@ -70,40 +72,53 @@ public class SceneManagerClass : MonoBehaviour
         controlUIShow = true;
     }
 
+    public void ShowMenu()
+    {
+        SoundManager.Instance.PlaySound(Sound.Button_Click);
+        menuUIShow = true;
+    }
+    
     public void Menu()
     {
         menu.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            print(KeyCode.Return);
             menu.SetActive(false);
             menuUIShow = false;
         }
 
-        portraitToggleON.onClick.AddListener(Portrait);
+        //controls.onClick.AddListener(ShowControlMenu);
 
-        portraitToggleOFF.onClick.AddListener(NoPortrait);
+        japaneseToggleON.onClick.AddListener(Japanese);
+
+        japaneseToggleOFF.onClick.AddListener(NoJapanese);
 
 
     }
     public void ControlMenu()
     {
-        controls.SetActive(true);
+        controlsUI.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            controls.SetActive(false);
+            controlsUI.SetActive(false);
             controlUIShow = false;
         }
 
     }
 
-    public void Portrait()
+    public void Japanese()
     {
-        portraitMode.isPortrait = true;
+        SoundManager.Instance.PlaySound(Sound.Button_Click);
+        tM.isChanged = true;
+        print("isChanged = " + tM.isChanged);
     }
 
-    public void NoPortrait()
+    public void NoJapanese()
     {
-        portraitMode.isPortrait = false;
+        SoundManager.Instance.PlaySound(Sound.Button_Click);
+        tM.isChanged = false;
+        print("isChanged = " + tM.isChanged);
     }
 
 }
