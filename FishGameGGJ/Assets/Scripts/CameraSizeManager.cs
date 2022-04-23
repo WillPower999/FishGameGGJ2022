@@ -9,6 +9,9 @@ public class CameraSizeManager : MonoBehaviour
     [SerializeField] float LandscapeCameraSize;
     [SerializeField] float PortraitCameraSize;
 
+    [SerializeField] GameObject landscapeContainer;
+    [SerializeField] GameObject portraitContainer;
+
     void Update()
     {
         if (Input.deviceOrientation == DeviceOrientation.Portrait || Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown)
