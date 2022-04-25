@@ -9,8 +9,32 @@ public class CameraPivot : MonoBehaviour
     [SerializeField] Transform camera;
     public bool rotateParent;
 
+    public GameObject cameraObj;
+    public bool startNewShake = false;
+    public float duration = 0.5f;
+    public float magnitude = 0.3f;
+
+    private float camPosx;
+    private float camPosy;
+    private float remainingDuration = 0f;
+    private float remainingMagnitude = 0f;
+    private float shakeFadeTime;
+
+    // Update is called once per frame
+    void Start()
+    {
+        camPosx = cameraObj.transform.localPosition.x;
+        camPosy = cameraObj.transform.localPosition.y;
+    }
+
     void Update()
     {
+        if (startNewShake)
+        {
+            StartShake(duration, magnitude);
+            startNewShake = false;
+        }
+        
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             if (rotateParent)
@@ -52,5 +76,34 @@ public class CameraPivot : MonoBehaviour
             SoundManager.Instance.PlaySound(Sound.Soft_Splash);
 
         }
+    }
+
+    private void LateUpdate()
+    {
+        Vector3 originalPos = transform.localPosition;
+
+        float elapsed = 0.0f;
+
+        if (remainingDuration > 0)
+        {
+            remainingDuration -= Time.deltaTime;
+
+            float x = Random.Range(-1f, 1f) * remainingMagnitude;
+            float y = Random.Range(-1f, 1f) * remainingMagnitude;
+
+            transform.localPosition = new Vector3(camPosx + x, camPosy + y, originalPos.z);
+
+            elapsed += Time.deltaTime;
+
+            remainingMagnitude = Mathf.MoveTowards(remainingMagnitude, 0f, shakeFadeTime * Time.deltaTime);
+        }
+    }
+
+    public void StartShake(float duration, float magnitude)
+    {
+        remainingDuration = duration;
+        remainingMagnitude = magnitude;
+
+        shakeFadeTime = magnitude / duration;
     }
 }
