@@ -11,14 +11,29 @@ public class Fish : MonoBehaviour
     public Animator animationClip;
     public float idleSpeed;
     public float moveSpeed;
+    public bool LateralMoveAllowed = true;
     private bool fishStill;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Fish>())
         {
-                LevelEndAnimation.Instance.FindCenterPoint();
+            LevelEndAnimation.Instance.FindCenterPoint();
         }
+        else if (other.GetComponent<LevelBoundaries>())
+        {
+
+        }
+        else
+        {
+            LateralMoveAllowed = false;
+        }
+        Debug.Log(other.gameObject.name);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        LateralMoveAllowed = true;
     }
 
     void Awake()
