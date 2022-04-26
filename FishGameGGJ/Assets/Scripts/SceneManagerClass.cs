@@ -40,6 +40,7 @@ public class SceneManagerClass : MonoBehaviour
             Menu();
             if (controlUIShow)
             {
+                menu.SetActive(false);
                 ControlMenu();
             }
             else
@@ -81,7 +82,7 @@ public class SceneManagerClass : MonoBehaviour
     public void Menu()
     {
         menu.SetActive(true);
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !controlUIShow)
         {
             print(KeyCode.Return);
             menu.SetActive(false);
@@ -94,6 +95,8 @@ public class SceneManagerClass : MonoBehaviour
 
         japaneseToggleOFF.onClick.AddListener(NoJapanese);
 
+        controls.onClick.AddListener(ShowControlMenu);
+
 
     }
     public void ControlMenu()
@@ -103,6 +106,7 @@ public class SceneManagerClass : MonoBehaviour
         {
             controlsUI.SetActive(false);
             controlUIShow = false;
+            menu.SetActive(true);
         }
 
     }

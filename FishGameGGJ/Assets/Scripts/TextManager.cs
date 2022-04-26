@@ -12,7 +12,14 @@ public class TextManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //upperBounds = japaneseBoxes.GetUpperBound(upperBounds);
+        if (Application.systemLanguage == SystemLanguage.English)
+        {
+
+        }
+        else
+        {
+            isJapanese = true;
+        }
     }
 
     // Update is called once per frame
@@ -22,6 +29,10 @@ public class TextManager : MonoBehaviour
         {
             isJapanese = true;
             print("isJapanese = " + isJapanese);
+        }
+        else
+        {
+            isJapanese = false;
         }
 
         if (isJapanese)
