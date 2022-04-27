@@ -46,7 +46,7 @@ public class TextManager : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i <= upperBounds; i++)
+            for (int i = 0; i <= upperBounds - 1; i++)
             {
                 print("i = " + i);
                 japaneseBoxes[i].SetActive(false);
