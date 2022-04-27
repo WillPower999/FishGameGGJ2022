@@ -19,6 +19,8 @@ public class SceneManagerClass : MonoBehaviour
     public GameObject menu;
     public GameObject controlsUI;
 
+    public Button loadGamePortrait;
+
     public void PlayOnAwake()
     {
         tM = FindObjectOfType<TextManager>();
@@ -29,6 +31,7 @@ public class SceneManagerClass : MonoBehaviour
     private void Start()
     {
         loadGame.onClick.AddListener(LoadGame);
+        loadGamePortrait.onClick.AddListener(LoadGame);
         menuUI.onClick.AddListener(ShowMenu);
         SoundManager.Instance.PlayMusic(Music.UI_Game_Audio);
     }

@@ -4,20 +4,22 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 
-public class CameraSizeManager : MonoBehaviour
+public class OrientationManager : MonoBehaviour
 {
-    [SerializeField] float LandscapeCameraSize;
-    [SerializeField] float PortraitCameraSize;
+    [SerializeField] GameObject landscapeContainer;
+    [SerializeField] GameObject portraitContainer;
 
     void Update()
     {
         if (Input.deviceOrientation == DeviceOrientation.Portrait || Input.deviceOrientation == DeviceOrientation.PortraitUpsideDown)
         {
-            Camera.main.orthographicSize = PortraitCameraSize;
+            landscapeContainer.transform.localScale = Vector3.zero;
+            portraitContainer.transform.localScale = Vector3.one;
         }
         else if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft || Input.deviceOrientation == DeviceOrientation.LandscapeRight)
         {
-            Camera.main.orthographicSize = LandscapeCameraSize;
+            landscapeContainer.transform.localScale = Vector3.one;
+            portraitContainer.transform.localScale = Vector3.zero;
         }
     }
 }
