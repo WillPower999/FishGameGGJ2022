@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FishDemo1.unity
     guid: a7a8160e55ecf4b439dac3d07bc80c1e
   - enabled: 1
