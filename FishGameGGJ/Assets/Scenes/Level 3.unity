@@ -4972,8 +4972,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 222504277619364520, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 222504277619364520, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
       propertyPath: orthographic size
       value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 222504277619364520, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.9150943
+      objectReference: {fileID: 0}
+    - target: {fileID: 222504277619364520, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.7654562
+      objectReference: {fileID: 0}
+    - target: {fileID: 222504277619364520, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.8951029
       objectReference: {fileID: 0}
     - target: {fileID: 222504277880438180, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
       propertyPath: m_RootOrder
@@ -5055,6 +5071,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0f1eb1d1ae0ee6e4a93ba2015a3d09d3, type: 3}
+    - target: {fileID: 222504278808760805, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
 --- !u!1 &1040987291 stripped
@@ -9124,7 +9144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 152a199981b73814a99e45c14b396a6a, type: 2}
+  - {fileID: 2100000, guid: 14851087597e79040970c4a9c7e64f03, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -34,8 +34,10 @@ public class CloudGeneratorScript : MonoBehaviour
         startPos.y = UnityEngine.Random.Range(startPos.y - 1f, startPos.y + 1f);
         cloud.transform.position = startPos;
 
-        float speed = UnityEngine.Random.Range(0.75f, 1.5f);
+        float speed = UnityEngine.Random.Range(0.5f, 1f);
         cloud.GetComponent<CloudScript>().StartFloating(speed, endPoint.transform.position.x);
+
+        cloud.transform.SetParent(Camera.main.transform);
     }
 
     void AttemptSpawn()
