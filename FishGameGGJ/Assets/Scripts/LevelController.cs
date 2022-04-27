@@ -91,7 +91,7 @@ public class LevelController : MonoBehaviour
         {
             Debug.Log("Set dive state to true, can't dive here");
             //ADD USER FEEDBACK HERE (Screenshake & Audio Clip) Call Emily's camera shake function, then play audio
-            shaker.StartShake(.5f, .3f);
+            //shaker.StartShake(.5f, .3f);
 
             SoundManager.Instance.PlaySound(Sound.FailDive);
 
@@ -140,7 +140,7 @@ public class LevelController : MonoBehaviour
         {
             Debug.Log("Set dive state to false, can't ascend here");
             //ADD USER FEEDBACK HERE (Screenshake & Audio Clip) Call Emily's camera shake function, then play audio
-            shaker.StartShake(.5f, .3f);
+            //shaker.StartShake(.5f, .3f);
 
             SoundManager.Instance.PlaySound(Sound.FailDive);
 
