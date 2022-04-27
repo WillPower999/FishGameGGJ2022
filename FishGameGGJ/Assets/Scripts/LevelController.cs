@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
@@ -32,6 +33,18 @@ public class LevelController : MonoBehaviour
     private Vector3 lowerOriginalPosition;
     private Vector3 upperMoveUp;
     private Vector3 lowerMoveUp;
+
+    [SerializeField] Button diveButton;
+
+    private void OnEnable()
+    {
+        diveButton.onClick.AddListener(HandleDivePressed);
+    }
+
+    private void OnDisable()
+    {
+        diveButton.onClick.RemoveListener(HandleDivePressed);
+    }
 
     void Start()
     {
@@ -91,7 +104,7 @@ public class LevelController : MonoBehaviour
         {
             Debug.Log("Set dive state to true, can't dive here");
             //ADD USER FEEDBACK HERE (Screenshake & Audio Clip) Call Emily's camera shake function, then play audio
-            //shaker.StartShake(.5f, .3f);
+            shaker.StartShake(.5f, .3f);
 
             SoundManager.Instance.PlaySound(Sound.FailDive);
 
@@ -140,7 +153,7 @@ public class LevelController : MonoBehaviour
         {
             Debug.Log("Set dive state to false, can't ascend here");
             //ADD USER FEEDBACK HERE (Screenshake & Audio Clip) Call Emily's camera shake function, then play audio
-            //shaker.StartShake(.5f, .3f);
+            shaker.StartShake(.5f, .3f);
 
             SoundManager.Instance.PlaySound(Sound.FailDive);
 
@@ -189,6 +202,19 @@ public class LevelController : MonoBehaviour
                 mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, newTransparency);
                 //Debug.Log($"The current alpha value is: {mat.color.a}");
             }
+        }
+    }
+
+    void HandleDivePressed()
+    {
+        DiveState = !DiveState;
+        if (DiveState)
+        {
+            diveButton.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            diveButton.transform.localScale = -Vector3.one;
         }
     }
 }

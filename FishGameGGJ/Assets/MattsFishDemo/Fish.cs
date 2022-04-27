@@ -32,7 +32,7 @@ public class Fish : MonoBehaviour
         {
             LateralMoveAllowed = false;
         }
-        Debug.Log(other.gameObject.name);
+        //Debug.Log(other.gameObject.name);
     }
 
     private void OnTriggerExit(Collider other)

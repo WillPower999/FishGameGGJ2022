@@ -6,20 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FishDemo1.unity
-    guid: a7a8160e55ecf4b439dac3d07bc80c1e
-  - enabled: 1
-    path: Assets/Scenes/GyroTest.unity
-    guid: e25bfbe749d866f46a51c3173c24b33d
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/FishDemo2.unity
-    guid: 77007b1d1a3499948842f5157c6e54fb
+    path: Assets/Scenes/Level 1.unity
+    guid: 68d78603c4fa0474ab8d05b848c06f6c
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 58f9d6487768ab240af5a138438e1f1e
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 0514ac2ef56eb954f82833402ee8c8b4
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 31090eb7f87e1d54d838ef81f5d3ae1c
+  - enabled: 1
+    path: Assets/Scenes/Level 5.unity
+    guid: 2b1fb6e24638a53419c70c9bf0604208
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 28adb8126749251449415deab09649df
