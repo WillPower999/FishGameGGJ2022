@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class bob : MonoBehaviour
 {
+    private Vector3 _initialPosition;
     private float _initialYPosition;
     public float bobDistance;
     public float bobDuration;
@@ -12,15 +13,16 @@ public class bob : MonoBehaviour
 
     void Start()
     {
-        _initialYPosition = transform.position.y;
+        //_initialYPosition = transform.position.y;
+        _initialPosition = transform.position;
         StartCoroutine(BobCo());
     }
 
     private IEnumerator BobCo()
     {
-        transform.DOMoveY(_initialYPosition + bobDistance, bobDuration).SetEase(ease);
+        transform.DOMoveY(_initialPosition.y + bobDistance, bobDuration).SetEase(ease);
         yield return new WaitForSeconds(bobDuration);
-        transform.DOMoveY(_initialYPosition - bobDistance, bobDuration).SetEase(ease);
+        transform.DOMove(_initialPosition, bobDuration).SetEase(ease);
         yield return new WaitForSeconds(bobDuration);
         StartCoroutine(BobCo());
     }

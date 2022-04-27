@@ -2095,7 +2095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 222504277880438181, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
       propertyPath: PortraitCameraSize
-      value: 11.5
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 222504277880438181, guid: 20845a8c5465bc64cae35c54e9047b3a, type: 3}
       propertyPath: LandscapeCameraSize

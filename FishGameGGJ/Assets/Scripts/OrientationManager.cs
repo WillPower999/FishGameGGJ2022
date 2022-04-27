@@ -15,11 +15,13 @@ public class OrientationManager : MonoBehaviour
         {
             landscapeContainer.transform.localScale = Vector3.zero;
             portraitContainer.transform.localScale = Vector3.one;
+            PlayerPrefs.SetInt("IsPortrait", 1);
         }
         else if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft || Input.deviceOrientation == DeviceOrientation.LandscapeRight)
         {
             landscapeContainer.transform.localScale = Vector3.one;
             portraitContainer.transform.localScale = Vector3.zero;
+            PlayerPrefs.SetInt("IsPortrait", 0);
         }
     }
 }
