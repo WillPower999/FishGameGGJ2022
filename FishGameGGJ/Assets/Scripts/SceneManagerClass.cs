@@ -12,6 +12,8 @@ public class SceneManagerClass : MonoBehaviour
     public Button controls;
     public Button japaneseToggleON;
     public Button japaneseToggleOFF;
+    public Button backControls;
+    public Button backMenu;
     //public CameraPivot portraitMode;
     public bool menuUIShow;
     public bool controlUIShow;
@@ -70,6 +72,7 @@ public class SceneManagerClass : MonoBehaviour
     public void ShowControlMenu()
     {
         SoundManager.Instance.PlaySound(Sound.Button_Click);
+        //backMenu.onClick.RemoveListener(Return);
         controlUIShow = true;
     }
 
@@ -82,33 +85,23 @@ public class SceneManagerClass : MonoBehaviour
     public void Menu()
     {
         menu.SetActive(true);
-        if (Input.GetKeyDown(KeyCode.Escape) && !controlUIShow)
-        {
-            print(KeyCode.Return);
-            menu.SetActive(false);
-            menuUIShow = false;
-        }
-
-        //controls.onClick.AddListener(ShowControlMenu);
 
         japaneseToggleON.onClick.AddListener(Japanese);
 
         japaneseToggleOFF.onClick.AddListener(NoJapanese);
 
         controls.onClick.AddListener(ShowControlMenu);
+        controls.onClick.RemoveListener(Return);
+
+        backMenu.onClick.AddListener(Return);
 
 
     }
     public void ControlMenu()
     {
         controlsUI.SetActive(true);
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            controlsUI.SetActive(false);
-            controlUIShow = false;
-            menu.SetActive(true);
-        }
 
+        backControls.onClick.AddListener(Return);
     }
 
     public void Japanese()
@@ -123,6 +116,22 @@ public class SceneManagerClass : MonoBehaviour
         SoundManager.Instance.PlaySound(Sound.Button_Click);
         tM.isChanged = false;
         print("isChanged = " + tM.isChanged);
+    }
+
+    public void Return()
+    {
+        if(menuUIShow && !controlUIShow)
+        {
+            menu.SetActive(false);
+            menuUIShow = false;
+        }
+        else if (controlUIShow)
+        {
+            controlsUI.SetActive(false);
+            controlUIShow = false;
+            menuUIShow = true;
+            menu.SetActive(true);
+        }
     }
 
 }
