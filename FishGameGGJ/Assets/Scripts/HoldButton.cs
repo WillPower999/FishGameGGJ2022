@@ -12,6 +12,14 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     [HideInInspector] public bool isPressed;
 
+    void Start()
+    {
+        if (WebGLManager.Instance != null && WebGLManager.Instance.isForWeb)
+        {
+            transform.localScale = Vector3.zero;
+        }
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         isPressed = true;

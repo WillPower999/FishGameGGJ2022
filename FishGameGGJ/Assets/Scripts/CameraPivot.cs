@@ -74,18 +74,23 @@ public class CameraPivot : MonoBehaviour
 
         }
 
-        //if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
-        //{
-        //    transform.DORotate(new Vector3(0, 0, 0), .5f);
-        //    camera.transform.DORotate(new Vector3(45, 0, 0), .5f);
-        //    SoundManager.Instance.PlaySound(Sound.Soft_Splash);
-        //}
-
-        if (!up.isPressed && !down.isPressed && !left.isPressed && !right.isPressed)
+        if (WebGLManager.Instance != null && WebGLManager.Instance.isForWeb)
         {
-            transform.DORotate(new Vector3(0, 0, 0), .5f);
-            camera.transform.DORotate(new Vector3(45, 0, 0), .5f);
-            //SoundManager.Instance.PlaySound(Sound.Soft_Splash);
+            if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+            {
+                transform.DORotate(new Vector3(0, 0, 0), .5f);
+                camera.transform.DORotate(new Vector3(45, 0, 0), .5f);
+                SoundManager.Instance.PlaySound(Sound.Soft_Splash);
+            }
+        }
+        else
+        {
+            if (!up.isPressed && !down.isPressed && !left.isPressed && !right.isPressed)
+            {
+                transform.DORotate(new Vector3(0, 0, 0), .5f);
+                camera.transform.DORotate(new Vector3(45, 0, 0), .5f);
+                SoundManager.Instance.PlaySound(Sound.Soft_Splash);
+            }
         }
     }
 

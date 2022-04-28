@@ -20,6 +20,11 @@ public class TextManager : MonoBehaviour
         {
             isJapanese = true;
         }
+
+        //if (WebGLManager.Instance != null && WebGLManager.Instance.isForWeb)
+        //{
+        //    isJapanese = true;
+        //}
     }
 
     // Update is called once per frame
