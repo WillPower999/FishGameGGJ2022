@@ -70,6 +70,12 @@ public class LevelController : MonoBehaviour
             {
                 FishOne.GetComponent<Fish>().movementForce = 0;
                 FishTwo.GetComponent<Fish>().movementForce = 0;
+
+                if (timerTarget == 0f)
+                {
+                    timerTarget = 1f;
+                }
+
                 timerStart = true;
                 LastDiveState = true;
             }
@@ -119,6 +125,12 @@ public class LevelController : MonoBehaviour
             {
                 FishOne.GetComponent<Fish>().movementForce = 0;
                 FishTwo.GetComponent<Fish>().movementForce = 0;
+
+                if (timerTarget > 0f)
+                {
+                    timerTarget = 1f;
+                }
+
                 timerStart = true;
                 LastDiveState = false;
             }
