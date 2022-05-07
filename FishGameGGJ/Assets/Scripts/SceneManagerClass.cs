@@ -12,14 +12,14 @@ public class SceneManagerClass : MonoBehaviour
     public Button controls;
     public Button japaneseToggleON;
     public Button japaneseToggleOFF;
+    public Button returnMenuButton;
+    public Button returnControlButton;
     //public CameraPivot portraitMode;
     public bool menuUIShow;
     public bool controlUIShow;
     public int sceneToLoad;
     public GameObject menu;
     public GameObject controlsUI;
-
-    public Button loadGamePortrait;
 
     public void PlayOnAwake()
     {
@@ -30,10 +30,25 @@ public class SceneManagerClass : MonoBehaviour
 
     private void Start()
     {
-        loadGame.onClick.AddListener(LoadGame);
-        loadGamePortrait.onClick.AddListener(LoadGame);
-        menuUI.onClick.AddListener(ShowMenu);
         SoundManager.Instance.PlayMusic(Music.UI_Game_Audio);
+
+    }
+
+    private void OnEnable()
+    {
+        loadGame.onClick.AddListener(LoadGame);
+        menuUI.onClick.AddListener(ShowMenu);
+        japaneseToggleON.onClick.AddListener(Japanese);
+        japaneseToggleOFF.onClick.AddListener(NoJapanese);
+
+        if (controls != null)
+        {
+            controls.onClick.AddListener(ShowControlMenu);
+        }
+
+        returnMenuButton.onClick.AddListener(Return);
+        returnControlButton.onClick.AddListener(Return);
+
     }
 
     private void Update()
@@ -91,20 +106,11 @@ public class SceneManagerClass : MonoBehaviour
             menu.SetActive(false);
             menuUIShow = false;
         }
-
-        //controls.onClick.AddListener(ShowControlMenu);
-
-        japaneseToggleON.onClick.AddListener(Japanese);
-
-        japaneseToggleOFF.onClick.AddListener(NoJapanese);
-
-        controls.onClick.AddListener(ShowControlMenu);
-
-
     }
     public void ControlMenu()
     {
         controlsUI.SetActive(true);
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             controlsUI.SetActive(false);
@@ -118,14 +124,28 @@ public class SceneManagerClass : MonoBehaviour
     {
         SoundManager.Instance.PlaySound(Sound.Button_Click);
         tM.isChanged = true;
-        print("isChanged = " + tM.isChanged);
     }
 
     public void NoJapanese()
     {
         SoundManager.Instance.PlaySound(Sound.Button_Click);
         tM.isChanged = false;
-        print("isChanged = " + tM.isChanged);
     }
 
+    public void Return()
+    {
+        print(menuUIShow);
+        print(controlUIShow);
+        if (controlUIShow)
+        {
+            controlUIShow = false;
+            controlsUI.SetActive(false);
+        }
+        else if (menuUIShow && !controlUIShow)
+        {
+            print("thoust mother");
+            menuUIShow = false;
+            menu.SetActive(false);
+        }
+    }
 }

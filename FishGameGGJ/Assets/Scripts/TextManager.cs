@@ -28,7 +28,6 @@ public class TextManager : MonoBehaviour
         if (isChanged)
         {
             isJapanese = true;
-            print("isJapanese = " + isJapanese);
         }
         else
         {
@@ -39,7 +38,6 @@ public class TextManager : MonoBehaviour
         {
             for (int i = 0; i <= upperBounds - 1; i++)
             {
-                print("i = " + i);
                 japaneseBoxes[i].SetActive(true);
                 englishBoxes[i].SetActive(false);
             }
@@ -48,7 +46,6 @@ public class TextManager : MonoBehaviour
         {
             for (int i = 0; i <= upperBounds; i++)
             {
-                print("i = " + i);
                 japaneseBoxes[i].SetActive(false);
                 englishBoxes[i].SetActive(true);
             }
