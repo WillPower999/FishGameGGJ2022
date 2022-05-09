@@ -70,6 +70,12 @@ public class LevelController : MonoBehaviour
             {
                 FishOne.GetComponent<Fish>().movementForce = 0;
                 FishTwo.GetComponent<Fish>().movementForce = 0;
+
+                if (timerTarget == 0f)
+                {
+                    timerTarget = 1f;
+                }
+
                 timerStart = true;
                 LastDiveState = true;
             }
@@ -119,6 +125,12 @@ public class LevelController : MonoBehaviour
             {
                 FishOne.GetComponent<Fish>().movementForce = 0;
                 FishTwo.GetComponent<Fish>().movementForce = 0;
+
+                if (timerTarget > 0f)
+                {
+                    timerTarget = 1f;
+                }
+
                 timerStart = true;
                 LastDiveState = false;
             }
@@ -153,7 +165,7 @@ public class LevelController : MonoBehaviour
         {
             Debug.Log("Set dive state to false, can't ascend here");
             //ADD USER FEEDBACK HERE (Screenshake & Audio Clip) Call Emily's camera shake function, then play audio
-            shaker.StartShake(.5f, .3f);
+            //shaker.StartShake(.5f, .3f);
 
             SoundManager.Instance.PlaySound(Sound.FailDive);
 
